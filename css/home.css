@@ -344,8 +344,12 @@ nav {
 .headline {
     position: absolute;
     top: 44vh;
-    left: 20px;
+    left: 10px;
     color: white;
+    background-color: #212429;
+    padding: 5PX;
+    border-radius: 5px;
+    align-items: center;
 }
 .headline h1 {
     font-size: 5vh;
