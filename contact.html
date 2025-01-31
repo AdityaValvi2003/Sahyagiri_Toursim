@@ -105,13 +105,13 @@
                                     <input type="text" placeholder="Name" maxlength="30">
                                 </div>
                                 <div class="input-control">
-                                    <input type="number" placeholder="Phone" min="10" max="10">
+                                    <input type="number" placeholder="Phone" pattern="\d{10}" maxlength="10">
                                 </div>
                                 <div class="input-control">
                                     <input type="text" placeholder="Subject">
                                 </div>
                                 <div class="input-control" id="message">
-                                    <input type="text" placeholder="Message">
+                                    <textarea id="message" placeholder="Message"></textarea>
                                 </div>
                                 <a href="#">SUBMIT</a>
                         </div>

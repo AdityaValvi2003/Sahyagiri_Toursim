@@ -23,8 +23,16 @@
 .contact1 a:hover {
     transform: scale(1.05);
 }
-#message input {
-    height: 15vh;
+#message textarea {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 10px 1px black;
+    overflow-wrap: anywhere;
+    resize: none;
 }
 .contact1 {
     display: flex;
