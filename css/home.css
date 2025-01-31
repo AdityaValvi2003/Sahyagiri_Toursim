@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav {
+    position: sticky; /* If your nav is fixed, adjust main accordingly */
+    top: 0;
+    width: 100%;
+    height: 60px; /* Define the height */
+    background-color: #333;
+    color: white;
+}
+.menubar {
+    position: sticky;
+    margin-top: 45px; /* Match this value to nav's height */
+    padding: 20px; /* Add padding for better layout */
+}
+.menubar ul a {
+    color: black;
+}
+.menubar {
+    display: flex;
+    justify-content: center;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    justify-content: center;
+    width: 100%;
+    overflow-y: auto;
+}
+.card {
+    margin: 10px;
+    box-shadow: 1px 1px 10px black;
+}
+.trekcontent .card .card-body {
+    background-color: #212429;
+    color: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.buttons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: whitesmoke;
+    color: black;
+    width: 50%;
+    margin: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.menubar ul a:hover {
+    color: whitesmoke;
+    background-color: #212429;
+}
+.buttons a:hover {
+    transform: scale(1.05);
+}
+.author {
+    text-align: right;
+}
+.card-link {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+    border-bottom-right-radius: 5px ;
+    border-bottom-left-radius: 5px;
+    background-color: #212429;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+.card-link:hover {
+    transform: scale(1.05) ;
+}
+.menubarhome {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    z-index: 3;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    margin-top: 45px; /* Match this value to nav's height */
+    padding: 20px; /* Add padding for better layout */
+}
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txt {
+    color: black;
+    margin-top: 90px;
+    display: flex;
+    width: 50%;
+    text-align: center;
+    flex-direction: column;
+}
+.txt h3 {
+    font-size: 4vh;
+}
+.handles {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 10vh;
+    right: 2px;
+    padding: 0;
+    z-index: 3;
+}
+.handles a img {
+    height: 50px;
+    padding: 3px;
+}
+.upcoming {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.upcoming h2 {
+    text-align: center;
+}
+.menubarhome {
+    background-color: #212429;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+.outer {
+    display: flex;
+    justify-content: center;
+}
+.card-body {
+    box-shadow: 3px 3px 10px whitesmoke;
+}
+.autosweep {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;
+}
+.auto {
+    height: 55vh;
+    width: 100vw;
+}
+.auto img {
+    height: 60vh;
+    width: 95vw;
+    object-fit: cover;
+}
+.upcoming {
+    background-color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.tail {
+    background-color: #212429;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.tail .tail-content .info {
+    width: 40vw;
+    color: whitesmoke;
+    margin: 10px;
+    padding: 2%;
+}
+.tail .tail-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4%;
+}
+.info a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.info a:hover {
+    color: rgb(122, 122, 122);
+}
+.upcoming .list {
+    margin-bottom: 20px;
+}
+#quotes {
+    z-index: 4;
+}
+.navbar-brand {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3vh;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    gap: 7px;
+}
+.navbar-brand img {
+    height: 4vh;
+}
+.upcoming {
+    padding: 2%;
+    box-shadow: 1px 1px 1px 10px black;
+}
+.tail {
+    box-shadow: 2px 2px 2px 10px #212429;
+}
+#quotes {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contact-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}.contact-inner {
+    background-color: #212429;
+    padding: 3%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 10px #212429;
+}
+.input-group-text img {
+    height: 20px;
+}
+#conto {
+    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    text-decoration: overline;
+}
+.submit {
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.submit a {
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    padding: 3%;
+    color: black;
+    border-radius: 10px;
+    width: 100%;
+}
+.submit a:hover {
+    transform: scale(1.02);
+}
+.details-outer {
+    width: 100%; 
+    margin-top: 80px; 
+    display: flex;
+    justify-content: center; 
+}
+.tocenter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.inner {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    flex-wrap: wrap;
+}
+.inner1 .swipeimg, .inner1 .highlights-details {
+    width: 100%; /* Ensures the image is responsive */
+    max-width: 650px;
+}
+.inner2 {
+    width: 50%;
+}
+.inner1 {
+    width: 50%;
+}
+.highlights-details {
+    background-color: #212429;
+    color: white;
+    border-radius: 5px;
+}
+.highlights-details p {
+    margin: 10px;
+    padding: 10px;
+}
+@media (max-width: 768px) {
+    .inner1, .inner2 {
+        width: 100%; /* Make both divs full width when wrapped */
+        margin-left: 0;
+    }
+}
+.inner {
+    padding: 2vh;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.body-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;
+}
+.image-box img {
+    height: 50vh;
+    width: 99vw;
+    object-fit: cover;
+}
+@media (max-width: 786px) {
+    .image-box img {
+        height: 50vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+}
+.image-box {
+    position: relative;
+}
+.price {
+    position: absolute;
+    top: 50vh;
+    right: 20px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    background-color: #212429;
+    border-radius: 5px;
+}
+.price a {
+    width: 100%;
+    border-radius: 2px;
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: center;
+    text-decoration: none;
+    color: #212429;
+    margin-bottom: 5px;
+}
+.price a:hover {
+    transform: scale(1.02);
+}
+.headline {
+    position: absolute;
+    top: 44vh;
+    left: 20px;
+    color: white;
+}
+.headline h1 {
+    font-size: 5vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.content {
+    width: 100%;
+}
+.info1 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+}
+.info2 {
+    width: 40vw;
+    margin-top: 7vh;
+}
+.info2 img {
+    width: 38vw;
+    height: 50vh;
+    margin: 1px;
+    object-fit: cover;
+}
+.info-tab {
+    display: flex;
+    width: 99vw;
+}
+@media (max-width: 768px) {
+    .info1 {
+        width: 100%;
+    }
+}
+@media (max-width: 786px) {
+    .price {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        top: auto;
+        width: 100%;
+        right: 0;
+        justify-content: space-between;
+        border-radius: 0px;
+        align-items: center;
+        height: 6vh;
+    }
+    .price a {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        height: 4.9vh;
+        align-items: center;
+        right: 0;
+    }
+    .price h3 {
+        margin-left: 70px;
+    }
+    .price b {
+        display: none;
+    }
+    .info2 {
+        display: none;
+    }
+}
+@media (max-width: 786px){
+    .menubarhome {
+        width: 100%;
+        border-radius: 0;
+    }
+    .menubarhome .card {
+        width:100%;
+    }
+    .menubarhome .card .card-body {
+        width: 100%;
+    }
+}
