@@ -211,19 +211,6 @@ nav {
 #quotes {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.contact-outer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20vh;
-}.contact-inner {
-    background-color: #212429;
-    padding: 3%;
-    border-radius: 10px;
-}
-.input-group-text img {
-    height: 20px;
-}
 #conto {
     color: whitesmoke;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

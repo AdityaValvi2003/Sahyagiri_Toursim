@@ -1,0 +1,45 @@
+.contact-outer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh;
+}
+.contact1 input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#message input {
+    height: 15vh;
+}
+.contact1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.contact-info {
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px 1px black;
+}
+.contact2 {
+    background-color: #212429;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+}
+.to-inline {
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-outer {
+        margin-top: 10vh;
+    }
+}
