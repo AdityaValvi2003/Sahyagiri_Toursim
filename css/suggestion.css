@@ -1,0 +1,50 @@
+.suggestion-out {
+    display: flex;
+    margin: 20vh;
+    justify-content: center;
+}
+.suggest-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.suggest-info input, .suggest-info textarea {
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 10px 1px black;
+}
+.suggest-info textarea {
+    height: 20vh;
+}
+.suggest-info a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: #212429;
+    color: white;
+    border-radius: 5px;
+}
+.suggest-info a:hover {
+    transform: scale(1.05);
+}
+@media (max-width:786px) {
+    .suggest-info input, .suggest-info textarea {
+        width: 350px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 10px 1px black;
+    }
+    .suggest-info textarea {
+        height: 20vh;
+    }
+    .suggestion-out {
+        display: flex;
+        margin: 15vh;
+        justify-content: center;
+    }
+}
