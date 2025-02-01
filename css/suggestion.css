@@ -19,15 +19,16 @@
 .suggest-info textarea {
     height: 20vh;
 }
-.suggest-info a {
+.suggest-info button {
     text-decoration: none;
     padding: 10px;
     margin: 10px;
     background-color: #212429;
     color: white;
     border-radius: 5px;
+    outline: none;
 }
-.suggest-info a:hover {
+.suggest-info button:hover {
     transform: scale(1.05);
 }
 @media (max-width:786px) {
