@@ -1,0 +1,62 @@
+.form-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.form-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.form-inner form {
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px 1px black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    padding: 30px;
+    background-color: rgb(163, 163, 163);
+}
+.form-inner form input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 29vw;
+    margin: 1px;
+    margin-top: 2px;
+    box-shadow: 1px 1px 15px 1px black  ;
+}
+.gender input {
+    width: 13.9vw;
+    margin: 0.1vw;
+}
+.name-input {
+    width: 14vw;
+    margin: 0.1vw;
+}
+.number input {
+    width: 28.1vw;
+    margin: 0.1vw;
+}
+.people input {
+    width: 13.9vw;
+    margin: 0.1vw;
+}
+button {
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 28vw;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 1px 1px 15px 1px black ;
+}
+
