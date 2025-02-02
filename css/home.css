@@ -319,7 +319,7 @@ nav {
     top: 50vh;
     right: 20px;
     text-align: center;
-    padding: 5px;
+    padding: 6px;
     color: white;
     background-color: #212429;
     border-radius: 5px;
@@ -333,6 +333,7 @@ nav {
     text-decoration: none;
     color: #212429;
     margin-bottom: 5px;
+    font-size: 1.5rem;
 }
 .price a:hover {
     transform: scale(1.02);
@@ -391,13 +392,13 @@ nav {
         justify-content: space-between;
         border-radius: 0px;
         align-items: center;
-        height: 6vh;
+        height: 50px;
     }
     .price a {
         width: 50%;
         display: flex;
         justify-content: center;
-        height: 4.9vh;
+        height: 40px;
         align-items: center;
         right: 0;
     }
