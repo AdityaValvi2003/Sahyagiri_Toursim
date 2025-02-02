@@ -40,3 +40,6 @@ select {
 .line {
     color: white;
 }
+.form-inner button:hover {
+    background-color: rgb(76, 163, 76);
+}

@@ -15,9 +15,8 @@
             rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet">
-            <link rel="stylesheet" href="css/book.css">
     </head>
-    <body>
+    <body style="background-color: whitesmoke;">
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
@@ -96,51 +95,87 @@
                     </div>
                 </div>
             </nav>
-            <div class="form-outer">
-                <div class="form-inner">
-                    <form id="trekForm">
-                        <h3 style="color: whitesmoke;">SEND REQUEST</h3> <hr class="line">
-                        <b style="color: whitesmoke;">Note: Bookings are available upon request <br> We would be happy to assist you.</b><br>
-                        
-                        <input type="text" id="name" name="name" placeholder="Name" required>       <br>             
-                        <input type="number" id="people" name="people" placeholder="Number of People" required>       <br>     
-                        <select id="pickup" required>
-                            <option value="0">Select Pick-up</option>
-                            <option value="Bhosri">Bhosri Bus Stand</option>
-                            <option value="Nashik-Phata">Nashik-Phata</option>
-                            <option value="Shivaji-Nagar">Shivaji-Nagar</option>
-                            <option value="Jmroad">Jm Road (Sambhaji Garden)</option>
-                            <option value="nul-stop">Nul-Stop</option>
-                            <option value="Rajaram-Bridge">Rajaram-Bridge</option>
-                            <option value="navale-bridge">Navale-bridge</option> 
-                        </select><br>
-                    
-                        <button type="submit">SEND</button>
-                    </form>
-                    
-                    <script>
-                    document.getElementById('trekForm').addEventListener('submit', function(event) {
-                        event.preventDefault(); // Prevent default form submission
-                    
-                        var name = document.getElementById('name').value;
-                        var people = document.getElementById('people').value;
-                        var pickupLocation = document.getElementById('pickup').value;
-                    
-                        // Check if 'Select Pick-up' is not chosen
-                        if (pickupLocation === "0") {
-                            alert("Please select a pick-up location.");
-                            return;
-                        }
-                    
-                        // Encode the message to be URL-friendly
-                        var message = `I%20would%20like%20to%20book%20a%20trek.%20Please%20find%20the%20details%20below%3A%0A%0A- %20Name%3A%20${encodeURIComponent(name)}%0A- %20Number%20of%20People%3A%20${encodeURIComponent(people)}%0A- %20Pick-Up%20Location%3A%20${encodeURIComponent(pickupLocation)}%0A%0ALooking%20forward%20to%20your%20confirmation.%20Thank%20you%21`;
-                    
-                        // Redirect to WhatsApp with the generated message
-                        window.location.href = `https://wa.me/9325944855?text=${message}`;
-                    });
-                    </script>                            
+            <div class="body-box">
+                <div class="outer-box">
+                    <div class="image-box">
+                        <img src="/img/harishchandra gad.png" alt="Trek-img">
+                        <div class="headline">
+                            <h1>HARISHCHANDRAGAD</h1>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <a href="book.html" target="_blank">Book</a>
+                        <h3>₹1399</h3>
+                        <b>Best Price Guaranteed</b>
+                    </div>
+                    <div class="content">
+                        <div class="info-tab">
+                            <div class="info1">
+                                <p>
+                                    <br>
+                                    <b>Historical Significance: </b><br>Harishchandragad is a historic hill fort in the Ahmednagar district of Maharashtra. It has ancient caves, temples, and a stronghold that dates back to the 6th century, making it an iconic trekking destination.
+            
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    <b>Attractions: </b>
+                                    <ul>
+                                        <li>Kokankada (majestic overhanging cliff)</li>
+                                        <li>Kedareshwar Cave Temple</li>
+                                        <li>Taramati Peak (second-highest peak in Maharashtra)</li>
+                                        <li>Harishchandreshwar Temple</li>
+                                        <li>Saptatirtha Pushkarini</li>
+                                    </ul>
+                                    <hr>
+                                    <br>
+                                    <b>Best Time to Visit: </b>October to March (for clear skies and pleasant weather), Monsoon (for lush greenery and misty views).
+                                    <br>
+                                    <hr>
+                                    <br>
+                                    <b>Ideal for: </b>Trekkers, adventure lovers, photographers, and nature enthusiasts.
+                                </p>
+                                <hr>
+                                <p>
+                                    <b>Pick-Up points: </b>
+                                    <ul>
+                                        <li>Nashik Phata</li>
+                                        <li>JM Road</li>
+                                        <li>Swargate</li>
+                                        <li>Katraj</li>
+                                        <li>Chandni Chowk</li>
+                                    </ul>
+                                </p>
+                                <hr>
+                                <p>
+                                    <b>Included: </b>
+                                    <ul>
+                                        <li>Travelling</li>
+                                        <li>Breakfast</li>
+                                        <li>Lunch</li>
+                                        <li>Trek Guide</li>
+                                    </ul>
+                                </p>
+                                <hr>
+                                <p>
+                                    <b>Excluded: </b>
+                                    <ul>
+                                        <li>Personal Expenses</li>
+                                        <li>Bottled Water & Snacks</li>
+                                        <li>Entry Fees (if applicable)</li>
+                                        <li>Anything not included</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="info2">
+                                <img src="/img/harishchandragad/1.png" alt="">
+                                <img src="/img/harishchandragad/2.png" alt="">
+                                <img src="/img/harishchandragad/3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
         <div class="handles">
             <a href="https://chat.whatsapp.com/DjwfA1Omxlk8qYur2niO7E"
                 target="_blank"><img src="/icon/whatsapp.png" alt></a>

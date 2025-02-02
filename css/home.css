@@ -78,7 +78,8 @@ nav {
     text-align: center;
 }
 .card-link:hover {
-    transform: scale(1.05) ;
+    
+    border: 1px solid white;
 }
 .menubarhome {
     display: flex;
