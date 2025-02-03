@@ -15,7 +15,7 @@
             rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet">
-        <link rel="stylesheet" href="/css/contact.css">
+        <link rel="stylesheet" href="/css/custom.css">
     </head>
     <body style="background-color: whitesmoke;">
         <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -73,71 +73,45 @@
                                     href="custom.html">Custom</a>
                             </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link active"
-                                        aria-current="page"
-                                        href="suggestion.html">Suggestion</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active"
-                                        aria-current="page"
-                                        href="contact.html">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <div class="contact-outer">
-                <div class="contact-inner">
-                    <div class="contact-info">
-                        <div class="contact1">
-                            <h3>Get in Touch</h3>
-                            <div class="input-control">
-                                <input type="text" placeholder="Name"
-                                    maxlength="30">
-                            </div>
-                            <div class="input-control">
-                                <input type="number" placeholder="Phone"
-                                    pattern="\d{10}" maxlength="10">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" placeholder="Subject">
-                            </div>
-                            <div class="input-control" id="message">
-                                <textarea id="message"
-                                    placeholder="Message"></textarea>
-                            </div>
-                            <button type="button">SUBMIT</button>
-                        </div>
-                        <div class="contact2">
-                            <h3 style="text-align: center;">Contact Us</h3><hr>
-                            <div class="to-inline">
-                                <span><img src="/icon/location.svg" alt></span>
-                                <b>Address :</b><br>
-                                <a
-                                    href="https://maps.app.goo.gl/1GkHYxCUqckpMZAQ7">Shivaji
-                                    Nagar, pune,<br> Maharashtra,<br>
-                                    411005</a></p>
-                        </div>
-                        <div class="to-inline">
-                            <span><img src="/icon/email.svg" alt></span>
-                            <b>Email :</b><br>
-                            <a
-                                href="mailto:sahyagiritrekerzz@gmail.com">sahyagiritrekerzz@gmail.com</a>
-                        </div>
-                        <div class="to-inline">
-                            <span><img src="/icon/phone.svg" alt></span>
-                            <b>Phone : </b><br>
-                            <a href="tel:+919307764122">+91 93077 64122</a> <br>
-                            <a href="tel:+919325944855">+91 93259 44855</a> <br>
-                            <a href="tel:+919156505453">+91 91565 05453</a>
-                        </div>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    aria-current="page"
+                                    href="suggestion.html">Suggestion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                    aria-current="page"
+                                    href="contact.html">Contact</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </nav>
+        <div class="custom-outer">
+            <div class="custom-inner">
+                <form id="customTrekForm">
+                    <h3>Customize your Trip</h3> <hr style="color: whitesmoke;">
+                    <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                    <input type="text" id="group" name="Group Type" placeholder="Friends/Family" required>
+                    <input type="text" id="phone" name="Phone Number" placeholder="Phone" required>
+                    <input type="number" id="people" name="People Count" placeholder="Number of People" required>
+                    <input type="text" id="pickup" name="Pick-Up" placeholder="Pickup Location" required>
+                    <input type="text" id="destination" name="Destination" placeholder="Destination" required>
+                    <input type="text" id="duration" name="Duration" placeholder="Duration For eg : 1N/1D" required>
+                    <input type="date" id="date" name="Date" required>
+                    <textarea id="message" name="Message" placeholder="Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
-
+        <script>
+                // Get today's date in YYYY-MM-DD format
+                let today = new Date().toISOString().split('T')[0];
+              
+                // Set the min attribute to today
+                document.getElementById("date").setAttribute("min", today);
+              </script>
         <div class="handles">
             <a href="https://chat.whatsapp.com/DjwfA1Omxlk8qYur2niO7E"
                 target="_blank"><img src="/icon/whatsapp.png" alt></a>

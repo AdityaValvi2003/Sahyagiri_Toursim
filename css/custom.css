@@ -1,0 +1,77 @@
+.custom-outer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.custom-inner form {
+    display: flex;
+    flex-direction: column;
+}
+.custom-inner {
+    background-color: #212429;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.custom-inner form input {
+    padding: 10px;
+    width: 30vw;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.custom-inner form textarea {
+    padding: 10px;
+    width: 30vw;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.custom-inner h3 {
+    color: whitesmoke;
+}
+.custom-inner button {
+    padding: 10px;
+    width: 30vw;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: rgb(5, 166, 5);
+}
+.custom-inner button:hover {
+    background-color: green;
+}
+@media (max-width:786px) {
+    .custom-inner form input {
+        padding: 10px;
+        width: 80vw;
+        margin: 5px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+    }
+    .custom-inner form textarea {
+        padding: 10px;
+        width: 80vw;
+        margin: 5px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+    }
+    .custom-inner button {
+        padding: 10px;
+        width: 80vw;
+        margin: 5px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(5, 166, 5);
+    }
+}
+.custom-inner {
+    margin-top: 5vh;
+}
