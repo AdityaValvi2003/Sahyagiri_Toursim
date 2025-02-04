@@ -90,21 +90,72 @@
         </nav>
         <div class="custom-outer">
             <div class="custom-inner">
-                <form id="customTrekForm">
+                <form id="trekForm">
                     <h3>Customize your Trip</h3> <hr style="color: whitesmoke;">
-                    <input type="text" id="name" name="Name" placeholder="Your Name" required>
-                    <input type="text" id="group" name="Group Type" placeholder="Friends/Family" required>
-                    <input type="text" id="phone" name="Phone Number" placeholder="Phone" required>
-                    <input type="number" id="people" name="People Count" placeholder="Number of People" required>
-                    <input type="text" id="pickup" name="Pick-Up" placeholder="Pickup Location" required>
-                    <input type="text" id="destination" name="Destination" placeholder="Destination" required>
-                    <input type="text" id="duration" name="Duration" placeholder="Duration For eg : 1N/1D" required>
+                    <input type="text" id="name" name="Name"
+                        placeholder="Your Name" required>
+                    <input type="text" id="group" name="Group Type"
+                        placeholder="Friends/Family" required>
+                    <input type="text" id="phone" name="Phone Number"
+                        placeholder="Phone" required>
+                    <input type="number" id="people" name="People Count"
+                        placeholder="Number of People" required>
+                    <input type="text" id="pickup" name="Pick-Up"
+                        placeholder="Pickup Location" required>
+                    <input type="text" id="destination" name="Destination"
+                        placeholder="Destination" required>
+                    <input type="text" id="duration" name="Duration"
+                        placeholder="Duration For eg : 1N/1D" required>
                     <input type="date" id="date" name="Date" required>
-                    <textarea id="message" name="Message" placeholder="Message"></textarea>
+                    <textarea id="message" name="Message"
+                        placeholder="Message"></textarea>
                     <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
+        <script>
+            document.getElementById("trekForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            let formData = new FormData(event.target);
+            let jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+                });
+
+            let submitButton = event.target.querySelector("button");
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+
+            fetch("https://script.google.com/macros/s/AKfycbytardfUHcSAFWMnKDpO4ADl0wwCZbkakfI7ulHfWw/dev", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Form submission failed.");
+                }
+                return response.text();
+            })
+            .then(data => {
+                alert("Form submitted successfully!");
+                console.log(data);
+             event.target.reset();
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("There was an error submitting the form. Please try again.");
+                })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = "Submit";
+            });
+        });
+        </script>
+
         <script>
                 // Get today's date in YYYY-MM-DD format
                 let today = new Date().toISOString().split('T')[0];
