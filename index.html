@@ -125,15 +125,7 @@
                     <h3>Welcome to </h3><h3 class="sah">Sahyagiri</h3><h3>
                         Tourism</h3>
                 </div>
-                <p><b>"Embark on a journey of thrilling adventures and
-                        unforgettable
-                        experiences with us. From majestic forts and serene
-                        beaches
-                        to breathtaking waterfalls and challenging treks, we
-                        bring
-                        you closer to nature and its wonders. Let’s explore,
-                        discover, and create memories that last a lifetime. Your
-                        adventure begins here!"</b></p>
+                <p><i >"Adventure isn’t just about places; it’s about moments that take your breath away. Whether scaling mighty forts, conquering rugged trails, or finding serenity by the waves, every step with us is a story in the making. Fuel your wanderlust, break free from the ordinary, and dive into the extraordinary. The wild is calling—are you ready?"</i></p>
                 <a href></a>
             </div>
         </div>
@@ -186,7 +178,8 @@
                         <h6
                             class="card-subtitle mb-2 text-body-secondary">Starting
                             from : 599/-</h6>
-                        <p class="card-text">Website is still in progress will be added soon</p>
+                        <p class="card-text">Website is still in progress will
+                            be added soon</p>
                         <br>
                         <a href="temp.html" class="card-link">View</a>
                     </div>
@@ -289,6 +282,23 @@
                 </div>
             </div>
         </div>
+        <script>
+            function performSearch(event) {
+                event.preventDefault(); // Prevents the page from reloading
+        
+                let searchQuery = document.getElementById("searchInput").value.toLowerCase();
+                let sections = document.querySelectorAll(".card"); // Searching in trek sections
+        
+                sections.forEach((section) => {
+                    let title = section.querySelector(".card-title").innerText.toLowerCase();
+                    if (title.includes(searchQuery)) {
+                        section.style.display = "block"; // Show if it matches
+                    } else {
+                        section.style.display = "none"; // Hide if it doesn't match
+                    }
+                });
+            }
+        </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

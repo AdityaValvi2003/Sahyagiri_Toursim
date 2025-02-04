@@ -475,3 +475,8 @@ nav {
         font-style: normal;
     }
 }
+  .sah {
+    font-size: 24px;
+    display: inline-block;
+    animation: dance 0.5s infinite ease-in-out;
+  }
