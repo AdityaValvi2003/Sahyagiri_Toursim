@@ -17,7 +17,7 @@
             rel="stylesheet">
         <link rel="stylesheet" href="/css/custom.css">
     </head>
-    <body style="background-color: whitesmoke;">
+    <body class="custom-body">
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
@@ -90,72 +90,35 @@
         </nav>
         <div class="custom-outer">
             <div class="custom-inner">
-                <form id="trekForm">
-                    <h3>Customize your Trip</h3> <hr style="color: whitesmoke;">
-                    <input type="text" id="name" name="Name"
-                        placeholder="Your Name" required>
-                    <input type="text" id="group" name="Group Type"
-                        placeholder="Friends/Family" required>
-                    <input type="text" id="phone" name="Phone Number"
-                        placeholder="Phone" required>
-                    <input type="number" id="people" name="People Count"
-                        placeholder="Number of People" required>
-                    <input type="text" id="pickup" name="Pick-Up"
-                        placeholder="Pickup Location" required>
-                    <input type="text" id="destination" name="Destination"
-                        placeholder="Destination" required>
-                    <input type="text" id="duration" name="Duration"
-                        placeholder="Duration For eg : 1N/1D" required>
-                    <input type="date" id="date" name="Date" required>
-                    <textarea id="message" name="Message"
-                        placeholder="Message"></textarea>
+                <form id="trekForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfv6tWiiQiK7YtUUnXspyvStuNP2f7V1oCnjMf075gmC06pMA/formResponse" method="POST" target="hidden_iframe" onsubmit="redirectToThankYou();">
+                    <h3>Customize your Trip</h3> 
+                    <hr style="color: whitesmoke;">
+                    
+                    <input type="text" id="name" name="entry.408721476" placeholder="Your Name" required>
+                    <input type="text" id="groupType" name="entry.1888985353" placeholder="Friends/Family" required>
+                    <input type="text" id="phoneNumber" name="entry.1548342643" placeholder="Phone" required>
+                    <input type="number" id="peopleCount" name="entry.1372654325" placeholder="Number of People" required>
+                    <input type="text" id="pickupLocation" name="entry.522466636" placeholder="Pickup Location" required>
+                    <input type="text" id="destination" name="entry.833695474" placeholder="Destination" required>
+                    <input type="text" id="duration" name="entry.1793807069" placeholder="Duration For eg : 1N/1D" required>
+                    <input type="date" id="date" name="entry.1532976589" required>
+                    <textarea id="message" name="entry.552234181" placeholder="Message"></textarea>
+                    
                     <button type="submit">Submit</button>
                 </form>
+                <iframe name="hidden_iframe" style="display:none;"></iframe>
+                
             </div>
         </div>
+
+        
         <script>
-            document.getElementById("trekForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-    
-            let formData = new FormData(event.target);
-            let jsonData = {};
-            formData.forEach((value, key) => {
-                jsonData[key] = value;
-                });
-
-            let submitButton = event.target.querySelector("button");
-            submitButton.disabled = true;
-            submitButton.textContent = "Submitting...";
-
-            fetch("https://script.google.com/macros/s/AKfycbytardfUHcSAFWMnKDpO4ADl0wwCZbkakfI7ulHfWw/dev", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(jsonData)
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Form submission failed.");
-                }
-                return response.text();
-            })
-            .then(data => {
-                alert("Form submitted successfully!");
-                console.log(data);
-             event.target.reset();
-            })
-            .catch(error => {
-                console.error("Error:", error);
-                alert("There was an error submitting the form. Please try again.");
-                })
-            .finally(() => {
-                submitButton.disabled = false;
-                submitButton.textContent = "Submit";
-            });
-        });
-        </script>
-
+            function redirectToThankYou() {
+                setTimeout(function() {
+                    window.location.href = "thankyou.html"; // Change to your custom thank-you page
+                }, 500); // Small delay to ensure form submission
+            }
+            </script>
         <script>
                 // Get today's date in YYYY-MM-DD format
                 let today = new Date().toISOString().split('T')[0];
