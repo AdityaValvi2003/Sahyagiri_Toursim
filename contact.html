@@ -92,23 +92,17 @@
                 <div class="contact-inner">
                     <div class="contact-info">
                         <div class="contact1">
-                            <h3>Get in Touch</h3>
-                            <div class="input-control">
-                                <input type="text" placeholder="Name"
-                                    maxlength="30">
-                            </div>
-                            <div class="input-control">
-                                <input type="number" placeholder="Phone"
-                                    pattern="\d{10}" maxlength="10">
-                            </div>
-                            <div class="input-control">
-                                <input type="text" placeholder="Subject">
-                            </div>
-                            <div class="input-control" id="message">
-                                <textarea id="message"
-                                    placeholder="Message"></textarea>
-                            </div>
-                            <button type="button">SUBMIT</button>
+                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeb6K2PmvuOIb6OVhwUbHhMwn8Vcrwclst4DFm--IrtPOVfzg/formResponse" method="POST" target="hidden_iframe" onsubmit="redirectToThankYou();">
+                                <h3>Get in Touch</h3>
+                    
+                                <input type="text" placeholder="Name" maxlength="30" name="entry.1988419992"> <br>
+                                <input type="text" placeholder="Phone" name="entry.387190843"> <br>
+                                <input type="text" placeholder="Subject" name="entry.4160465"> <br>
+                                <textarea id="message" placeholder="Message" name="entry.272876327"></textarea > <br>
+                           
+                                <button type="submit">SUBMIT</button>
+                            </form>
+                            <iframe name="hidden_iframe" style="display:none;"></iframe>
                         </div>
                         <div class="contact2">
                             <h3 style="text-align: center;">Contact Us</h3><hr>
@@ -137,7 +131,13 @@
                 </div>
             </div>
         </div>
-
+        <script>
+            function redirectToThankYou() {
+                setTimeout(function() {
+                    window.location.href = "thankyou.html"; // Change to your custom thank-you page
+                }, 500); // Small delay to ensure form submission
+            }
+            </script>
         <div class="handles">
             <a href="https://chat.whatsapp.com/DjwfA1Omxlk8qYur2niO7E"
                 target="_blank"><img src="/icon/whatsapp.png" alt></a>

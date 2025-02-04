@@ -23,7 +23,7 @@
 .contact1 button:hover {
     transform: scale(1.05);
 }
-#message textarea {
+textarea {
     width: 300px;
     height: 100px;
     padding: 10px;
