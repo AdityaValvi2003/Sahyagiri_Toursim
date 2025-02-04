@@ -90,17 +90,26 @@
             </nav>
             <div class="suggestion-out">
                 <div class="suggestion-inner">
-                    <form netlify>
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfpmH_IvZoqyv6EnJlhVta3sHWE9wkNDS6sTGU0_oBOm5VogA/formResponse" method="POST" target="hidden_iframe" onsubmit="redirectToThank();">
                     <div class="suggest-info">
                         <h3>Suggestion</h3>
                         <i><b>"We value your ideas! Help us improve."</b></i>
-                        <input type="text" placeholder="Name">
-                        <textarea placeholder="Message"></textarea>
+                        <input type="text" placeholder="Name" name="entry.259439774">
+                        <textarea placeholder="Message" name="entry.1827345829"></textarea>
                         <button type="submit">SUBMIT</button>
                     </div>
                 </div>
             </form>
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
             </div>
+
+            <script>
+                function redirectToThank() {
+                    setTimeout(function() {
+                        window.location.href = "thank1.html"; // Change to your custom thank-you page
+                    }, 500); // Small delay to ensure form submission
+                }
+                </script>
         <div class="handles">
             <a href="https://chat.whatsapp.com/DjwfA1Omxlk8qYur2niO7E"
                 target="_blank"><img src="/icon/whatsapp.png" alt></a>
