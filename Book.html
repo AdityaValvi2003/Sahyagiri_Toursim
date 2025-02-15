@@ -93,7 +93,6 @@
                     <form id="trekForm">
                         <h3 style="color: whitesmoke;">SEND REQUEST</h3> <hr class="line">
                         <b style="color: whitesmoke;">Note: Bookings are available upon request <br> We would be happy to assist you.</b><br>
-                        
                         <input type="text" id="name" name="name" placeholder="Name" required>       <br>             
                         <input type="number" id="people" name="people" placeholder="Number of People" required>       <br>     
                         <select id="pickup" required>
@@ -106,10 +105,8 @@
                             <option value="Rajaram-Bridge">Rajaram-Bridge</option>
                             <option value="navale-bridge">Navale-bridge</option> 
                         </select><br>
-                    
                         <button type="submit">SEND</button>
-                    </form>
-                    
+                    </form> 
                     <script>
                     document.getElementById('trekForm').addEventListener('submit', function(event) {
                         event.preventDefault(); // Prevent default form submission

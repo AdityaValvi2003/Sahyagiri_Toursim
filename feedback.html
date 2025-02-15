@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .feedback-form, .feedback-display {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            margin: 20px 0;
+        }
+        .feedback-form h2, .feedback-display h2 {
+            margin-bottom: 20px;
+        }
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .feedback-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #5cb85c;
+            color: #fff;
+            cursor: pointer;
+        }
+        .feedback-form button:hover {
+            background: #4cae4c;
+        }
+        .star-rating {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .star-rating input:checked ~ label,
+        .star-rating input:checked ~ label ~ label {
+            color: #f5b301;
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #f5b301;
+        }
+        .feedback-display {
+            display: none;
+        }
+        .feedback-display.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-form">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="rating">Rating:</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
+            
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="feedback-display" id="feedbackDisplay">
+        <h2>Submitted Feedback</h2>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Rating:</strong> <span id="displayRating"></span></p>
+        <p><strong>Feedback:</strong> <span id="displayFeedback"></span></p>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var rating = document.querySelector('input[name="rating"]:checked').value;
+            var feedback = document.getElementById('feedback').value;
+
+            // Send data to Google Sheets
+            fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email,
+                    rating: rating,
+                    feedback: feedback
+                })
+            }).then(response => {
+                // Display feedback on the home screen
+                document.getElementById('displayName').innerText = name;
+                document.getElementById('displayEmail').innerText = email;
+                document.getElementById('displayRating').innerText = rating;
+                document.getElementById('displayFeedback').innerText = feedback;
+                
+                document.getElementById('feedbackDisplay').classList.add('active');
+            }).catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+</html>
